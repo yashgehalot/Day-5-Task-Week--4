@@ -1,0 +1,321 @@
+{
+	"info": {
+		"_postman_id": "604a553d-1cf9-4db3-96d0-92feb02190e4",
+		"name": "My Collection",
+		"description": "### Welcome to Postman! This is your first collection.\n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests  \n• Test your API in real-world scenarios  \n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50469329",
+		"_collection_link": "https://gehlotyash71-1584777.postman.co/workspace/Yash-Gehlot's-Workspace~0d78e78e-8977-48f0-81c1-d976c8cf006e/collection/50469329-604a553d-1cf9-4db3-96d0-92feb02190e4?action=share&source=collection_link&creator=50469329"
+	},
+	"item": [
+		{
+			"name": "Final Task ",
+			"item": [
+				{
+					"name": "Register API",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjkzMDA5NzFmNmM0Njg0NzJlMmVmNjlmIn0sImlhdCI6MTc2NDg0Njg4NH0.Zq5iOq2EKfTGBapKwvkEm8jOwjxMCbyzSeeVyEN2t5E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Yash Gehlot\",\r\n    \"email\": \"Yash123@gmail.com\",\r\n    \"password\": \"Yash123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login API",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"Yash123@gmail.com\",\r\n    \"password\": \"Yash123\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Expenses",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjkzMzA1ZGZhM2ExYzdkMmQ4MWM3YWMxIn0sImlhdCI6MTc2NDk1MTY4OH0.WfCunXkut21NjI8u44jIa8qPAm0UP86yp4IjAat4LQQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjkzMzA1ZGZhM2ExYzdkMmQ4MWM3YWMxIn0sImlhdCI6MTc2NDk1MTY4OH0.WfCunXkut21NjI8u44jIa8qPAm0UP86yp4IjAat4LQQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Burger Party\",\r\n    \"amount\": 700,\r\n    \"category\": \"Food\",\r\n    \"description\": \"Lunch with Office Boys\"  \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/expenses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"expenses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Singal API",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjkzMzA1ZGZhM2ExYzdkMmQ4MWM3YWMxIn0sImlhdCI6MTc2NDk1MTY4OH0.WfCunXkut21NjI8u44jIa8qPAm0UP86yp4IjAat4LQQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjkzMzA1ZGZhM2ExYzdkMmQ4MWM3YWMxIn0sImlhdCI6MTc2NDk1MTY4OH0.WfCunXkut21NjI8u44jIa8qPAm0UP86yp4IjAat4LQQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/expenses/693307f5a3a1c7d2d81c7ac6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"expenses",
+								"693307f5a3a1c7d2d81c7ac6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Expense",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjkzMzA1ZGZhM2ExYzdkMmQ4MWM3YWMxIn0sImlhdCI6MTc2NDk1MTY4OH0.WfCunXkut21NjI8u44jIa8qPAm0UP86yp4IjAat4LQQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjkzMzA1ZGZhM2ExYzdkMmQ4MWM3YWMxIn0sImlhdCI6MTc2NDk1MTY4OH0.WfCunXkut21NjI8u44jIa8qPAm0UP86yp4IjAat4LQQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/expenses/693307f5a3a1c7d2d81c7ac6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"expenses",
+								"693307f5a3a1c7d2d81c7ac6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Expenses Not Found",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjkzMzA1ZGZhM2ExYzdkMmQ4MWM3YWMxIn0sImlhdCI6MTc2NDk1MTY4OH0.WfCunXkut21NjI8u44jIa8qPAm0UP86yp4IjAat4LQQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjkzMzA1ZGZhM2ExYzdkMmQ4MWM3YWMxIn0sImlhdCI6MTc2NDk1MTY4OH0.WfCunXkut21NjI8u44jIa8qPAm0UP86yp4IjAat4LQQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/expenses/693307f5a3a1c7d2d81c7ac6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"expenses",
+								"693307f5a3a1c7d2d81c7ac6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Sample Product\",\r\n  \"price\": 199.99,\r\n  \"category\": \"electronics\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
